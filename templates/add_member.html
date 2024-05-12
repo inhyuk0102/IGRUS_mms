@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>회원 등록</h2>
+<form action="/add_member" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">이름:</label>
+        <input type="text" class="form-control" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="student_id">학번:</label>
+        <input type="text" class="form-control" name="student_id" required>
+    </div>
+    <div class="form-group">
+        <label for="department">학과:</label>
+        <input type="text" class="form-control" name="department" required>
+    </div>
+    <div class="form-group">
+        <label for="photo">사진:</label>
+        <input type="file" class="form-control-file" name="photo">
+    </div>
+    <button type="submit" class="btn btn-primary">등록</button>
+</form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Settings</h2>
+<form action="/settings" method="POST">
+    <div class="form-group">
+        <label for="dynamodb_table">DynamoDB 테이블명:</label>
+        <input type="text" class="form-control" name="dynamodb_table" value="{{ dynamodb_table }}">
+    </div>
+    <div class="form-group">
+        <label for="s3_bucket">S3 버킷명:</label>
+        <input type="text" class="form-control" name="s3_bucket" value="{{ s3_bucket }}">
+    </div>
+    <button type="submit" class="btn btn-primary">저장</button>
+</form>
+{% endblock %}
